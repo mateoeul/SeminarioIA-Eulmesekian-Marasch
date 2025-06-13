@@ -33,7 +33,6 @@ class Estudiantes {
   // Agregar estudiante
   agregarEstudiante(nombre, apellido, curso) {
     this.estudiantes.push({ nombre, apellido, curso });
-    this.guardarEstudiantes();
   }
 
 

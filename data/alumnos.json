@@ -29,6 +29,16 @@
       "nombre": "Pedro",
       "apellido": "González",
       "curso": "4B"
+    },
+    {
+      "nombre": "Eric",
+      "apellido": "Amrasch",
+      "curso": "5D"
+    },
+    {
+      "nombre": "Ciro",
+      "apellido": "Ben Dov",
+      "curso": "5D"
     }
   ]
 }

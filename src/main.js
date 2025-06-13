@@ -78,20 +78,20 @@ const buscarPorApellidoTool = tool({
 // Tool para agregar estudiante
 const agregarEstudianteTool = tool({
     name: "agregarEstudiante",
-    description: "Usa esta función para agregar un nuevo estudiante",
+    description: "Usa esta función para agregar un nuevo estudiante. Primero verifica que el alumno no exisrta, y luego, una vez verificado, lo agrega. Segui linealmente el proceso, no te saltees pasos.",
     parameters: z.object({
         nombre: z.string().describe("El nombre del estudiante"),
         apellido: z.string().describe("El apellido del estudiante"),
         curso: z.string().describe("El curso del estudiante (ej: 4A, 4B, 5A)"),
     }),
     execute: ({ nombre, apellido, curso }) => {
-        const yaExiste = estudiantes.buscarPorNombre(nombre)
+        const yaExiste = estudiantes.buscarEstudiantePorNombre(nombre)
             .some(e => e.apellido.toLowerCase() === apellido.toLowerCase() && e.curso.toLowerCase() === curso.toLowerCase());
         if (yaExiste) {
             return `Ya existe un estudiante con el nombre "${nombre}" y apellido "${apellido}" en el curso "${curso}".`;
         }
         estudiantes.agregarEstudiante(nombre, apellido, curso);
-        estudiantes.guardarEstudiantesEnJson?.();
+        estudiantes.guardarEstudiantes(); // Guardar cambios en el archivo JSON
         return `Estudiante agregado: ${nombre} ${apellido} (${curso})`;
     },
 });
