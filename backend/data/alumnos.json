@@ -39,6 +39,26 @@
       "nombre": "Ciro",
       "apellido": "Ben Dov",
       "curso": "5D"
+    },
+    {
+      "nombre": "Tobias",
+      "apellido": "Jajurin",
+      "curso": "9A"
+    },
+    {
+      "nombre": "Tobias Jajurin",
+      "apellido": "Jajurin",
+      "curso": "9A"
+    },
+    {
+      "nombre": "Verónica",
+      "apellido": "Supichatti",
+      "curso": "101A"
+    },
+    {
+      "nombre": "Liliana",
+      "apellido": "Llampa",
+      "curso": "66A"
     }
   ]
 }

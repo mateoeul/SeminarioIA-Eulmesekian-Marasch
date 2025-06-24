@@ -137,3 +137,4 @@ Puedo ayudarte a:
 
 // Iniciar el chat
 empezarChat(elAgente, mensajeBienvenida);
+export { elAgente };
